@@ -14,16 +14,22 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-             @"code": @"code",
-             @"codeTwo": @"codeTwo"
+             @"cloudTrace": @"X-Cloud-Trace-Context",
+             @"language": @"Accept-Language",
+             @"host": @"Host",
+             @"agent": @"User-Agent",
+             @"accept": @"Accept"
              };
 }
 
 -(NSMutableArray *)getSettingsAsArray {
 
     NSMutableArray * arraySettings = [[NSMutableArray alloc]init];
-    [arraySettings addObject:self.code];
-    [arraySettings addObject:self.codeTwo];
+    [arraySettings addObject:self.cloudTrace];
+    [arraySettings addObject:self.language];
+    [arraySettings addObject:self.host];
+    [arraySettings addObject:self.agent];
+    [arraySettings addObject:self.accept];
     return arraySettings;
 }
 

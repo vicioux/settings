@@ -11,8 +11,11 @@
 
 @interface Settings : MTLModel <MTLJSONSerializing>
 
-@property(nonatomic, copy) NSString *code;
-@property(nonatomic, copy) NSString *codeTwo;
+@property(nonatomic, copy) NSString *cloudTrace;
+@property(nonatomic, copy) NSString *language;
+@property(nonatomic, copy) NSString *host;
+@property(nonatomic, copy) NSString *agent;
+@property(nonatomic, copy) NSString *accept;
 
 -(NSMutableArray *)getSettingsAsArray;
 

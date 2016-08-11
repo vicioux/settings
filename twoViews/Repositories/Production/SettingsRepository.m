@@ -36,7 +36,7 @@ static id _sharedInstance;
 }
 
 -(void)getSettings:(void (^)(Settings *settings, NSError *error))block {
-    NSURL *URL = [NSURL URLWithString:@"http://private-87410-testdata2.apiary-mock.com/apiTest"];
+    NSURL *URL = [NSURL URLWithString:@"http://headers.jsontest.com"];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:URL.absoluteString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         

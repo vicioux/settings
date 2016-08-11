@@ -37,12 +37,14 @@ static id _sharedInstance;
     if (block){
         
         Settings *settings = [[Settings alloc] init];
-        [settings setCode:@"hello"];
-        [settings setCodeTwo:@"helloTwo"];
+        [settings setHost:@"hello"];
+        [settings setCloudTrace:@"helloTwo"];
+        [settings setLanguage:@"helloTwo"];
+        [settings setAgent:@"helloTwo"];
+        [settings setAccept:@"helloTwo"];
         
         block(settings, nil);
     }
 }
-
 
 @end
