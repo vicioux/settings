@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Mantle.h"
 
-@interface Settings : NSObject
+@interface Settings : MTLModel
 
 @property(nonatomic, copy) NSString *code;
 @property(nonatomic, copy) NSString *codeTwo;

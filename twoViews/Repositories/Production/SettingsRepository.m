@@ -8,6 +8,9 @@
 
 #import "SettingsRepository.h"
 #import "Settings.h"
+#import "AFNetworking.h"
+#import "AFURLSessionManager.h"
+
 
 @implementation SettingsRepository
 static id _sharedInstance;
@@ -33,10 +36,16 @@ static id _sharedInstance;
 }
 
 -(void)getSettings:(void (^)(Settings *settings, NSError *error))block {
-    if (block){
-        Settings *settings = [[Settings alloc] init];
+    NSURL *URL = [NSURL URLWithString:@"http://private-87410-testdata2.apiary-mock.com/apiTest"];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:URL.absoluteString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        
+        Settings *settings = [MTLJSONAdapter modelOfClass:Settings.class fromJSONDictionary:responseObject error:nil];
         block(settings, nil);
-    }
+        
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        block(nil, error);
+    }];
 }
 
 @end

@@ -10,6 +10,15 @@
 
 @implementation Settings
 
+
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"code": @"code",
+             @"codeTwo": @"codeTwo"
+             };
+}
+
 -(NSMutableArray *)getSettingsAsArray {
 
     NSMutableArray * arraySettings = [[NSMutableArray alloc]init];

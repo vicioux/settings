@@ -12,7 +12,7 @@
 
 @implementation RepositoryLocator
 
-BOOL USE_TEST_REPOS = YES;
+BOOL USE_TEST_REPOS = NO;
 
 static id _sharedInstance;
 
