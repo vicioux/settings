@@ -10,6 +10,7 @@
 
 @interface ItemsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *itemsTableView;
 
 
 

@@ -12,5 +12,8 @@
 @interface AppModel : NSObject
 
 @property (nonatomic, strong) Settings *settings;
+@property (nonatomic, strong) NSMutableArray *settingsArray;
 
++ (AppModel *) sharedInstance;
+- (void)findSettings:(void (^)(NSError *error)) block;
 @end

@@ -10,4 +10,9 @@
 
 @interface Settings : NSObject
 
+@property(nonatomic, copy) NSString *code;
+@property(nonatomic, copy) NSString *codeTwo;
+
+-(NSMutableArray *)getSettingsAsArray;
+
 @end

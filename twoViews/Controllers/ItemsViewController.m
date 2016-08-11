@@ -7,8 +7,10 @@
 //
 
 #import "ItemsViewController.h"
+#import "AppModel.h"
 
 @interface ItemsViewController ()
+
 
 @end
 
@@ -19,14 +21,19 @@ NSArray *tableData;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    tableData = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
+    
+    self.title = @"SettingsList";
+    
+    __weak typeof(self) weakSelf = self;
+    [[AppModel sharedInstance] findSettings:^(NSError *error) {
+        [weakSelf.itemsTableView reloadData];
+    }];
 
-    // Do view setup here.
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [tableData count];
+    return [AppModel sharedInstance].settingsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -39,7 +46,7 @@ NSArray *tableData;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[AppModel sharedInstance].settingsArray objectAtIndex:indexPath.row];
     return cell;
 }
 

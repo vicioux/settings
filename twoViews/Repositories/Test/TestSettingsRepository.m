@@ -35,7 +35,11 @@ static id _sharedInstance;
 
 -(void)getSettings:(void (^)(Settings *settings, NSError *error))block {
     if (block){
+        
         Settings *settings = [[Settings alloc] init];
+        [settings setCode:@"hello"];
+        [settings setCodeTwo:@"helloTwo"];
+        
         block(settings, nil);
     }
 }

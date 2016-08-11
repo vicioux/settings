@@ -40,21 +40,23 @@ RepositoryLocator *context;
     }
 }
 
-- (Settings *)settings {
+- (NSMutableArray *)settingsArray {
     
-    if (_settings) {
-        _settings = [[Settings alloc]init];
+    if (self.settings) {
+        _settingsArray = [self.settings getSettingsAsArray];
     }
     
-    return _settings;
+    return _settingsArray;
 }
 
-- (void)findSettings:(void (^)(NSError *error)) block {
+
+
+-(void)findSettings:(void (^)(NSError *error)) block {
     __weak typeof(self) weakSelf = self;
     [context.settingsRepository getSettings:^(Settings *settings, NSError *error) {
         
         if (settings && !error) {
-            weakSelf.settings = [settings mutableCopy];
+            weakSelf.settings = settings;
         }
         
         if (block) {

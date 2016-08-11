@@ -61,6 +61,9 @@
                             <constraint firstItem="ySv-Y9-5dg" firstAttribute="height" secondItem="eBD-6i-nUj" secondAttribute="height" id="i4B-i8-du6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemsTableView" destination="ySv-Y9-5dg" id="Ba6-fL-NLq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1p-PY-pXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

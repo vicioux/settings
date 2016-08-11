@@ -10,4 +10,12 @@
 
 @implementation Settings
 
+-(NSMutableArray *)getSettingsAsArray {
+
+    NSMutableArray * arraySettings = [[NSMutableArray alloc]init];
+    [arraySettings addObject:self.code];
+    [arraySettings addObject:self.codeTwo];
+    return arraySettings;
+}
+
 @end
