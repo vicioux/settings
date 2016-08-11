@@ -15,6 +15,12 @@
 		601989721D5C361500E7CCF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601989701D5C361500E7CCF9 /* LaunchScreen.storyboard */; };
 		6019897D1D5C361500E7CCF9 /* twoViewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6019897C1D5C361500E7CCF9 /* twoViewsTests.m */; };
 		601989881D5C361500E7CCF9 /* twoViewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 601989871D5C361500E7CCF9 /* twoViewsUITests.m */; };
+		6019899B1D5C36AE00E7CCF9 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601989991D5C36AE00E7CCF9 /* ItemsViewController.m */; };
+		601989A21D5C3A6600E7CCF9 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 601989A11D5C3A6600E7CCF9 /* AppModel.m */; };
+		601989A61D5C3AEB00E7CCF9 /* RepositoryLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 601989A51D5C3AEB00E7CCF9 /* RepositoryLocator.m */; };
+		601989AC1D5C3C2C00E7CCF9 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 601989AB1D5C3C2C00E7CCF9 /* Settings.m */; };
+		601989B31D5C3E0600E7CCF9 /* TestSettingsRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 601989B21D5C3E0600E7CCF9 /* TestSettingsRepository.m */; };
+		601989B61D5C3FA100E7CCF9 /* SettingsRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 601989B51D5C3FA100E7CCF9 /* SettingsRepository.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,19 @@
 		601989831D5C361500E7CCF9 /* twoViewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twoViewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		601989871D5C361500E7CCF9 /* twoViewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = twoViewsUITests.m; sourceTree = "<group>"; };
 		601989891D5C361500E7CCF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		601989981D5C36AE00E7CCF9 /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemsViewController.h; path = Controllers/ItemsViewController.h; sourceTree = "<group>"; };
+		601989991D5C36AE00E7CCF9 /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemsViewController.m; path = Controllers/ItemsViewController.m; sourceTree = "<group>"; };
+		601989A01D5C3A6600E7CCF9 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppModel.h; path = Models/AppModel.h; sourceTree = "<group>"; };
+		601989A11D5C3A6600E7CCF9 /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppModel.m; path = Models/AppModel.m; sourceTree = "<group>"; };
+		601989A41D5C3AEB00E7CCF9 /* RepositoryLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepositoryLocator.h; path = Repositories/RepositoryLocator.h; sourceTree = "<group>"; };
+		601989A51D5C3AEB00E7CCF9 /* RepositoryLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepositoryLocator.m; path = Repositories/RepositoryLocator.m; sourceTree = "<group>"; };
+		601989AA1D5C3C2C00E7CCF9 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = Models/Settings.h; sourceTree = "<group>"; };
+		601989AB1D5C3C2C00E7CCF9 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Models/Settings.m; sourceTree = "<group>"; };
+		601989B01D5C3CA700E7CCF9 /* ISettingsRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ISettingsRepository.h; path = Repositories/Protocols/ISettingsRepository.h; sourceTree = "<group>"; };
+		601989B11D5C3E0600E7CCF9 /* TestSettingsRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestSettingsRepository.h; path = Repositories/Test/TestSettingsRepository.h; sourceTree = "<group>"; };
+		601989B21D5C3E0600E7CCF9 /* TestSettingsRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestSettingsRepository.m; path = Repositories/Test/TestSettingsRepository.m; sourceTree = "<group>"; };
+		601989B41D5C3FA100E7CCF9 /* SettingsRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsRepository.h; path = Repositories/Production/SettingsRepository.h; sourceTree = "<group>"; };
+		601989B51D5C3FA100E7CCF9 /* SettingsRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsRepository.m; path = Repositories/Production/SettingsRepository.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +120,11 @@
 		601989611D5C361500E7CCF9 /* twoViews */ = {
 			isa = PBXGroup;
 			children = (
-				601989651D5C361500E7CCF9 /* AppDelegate.h */,
-				601989661D5C361500E7CCF9 /* AppDelegate.m */,
-				601989681D5C361500E7CCF9 /* ViewController.h */,
-				601989691D5C361500E7CCF9 /* ViewController.m */,
-				6019896B1D5C361500E7CCF9 /* Main.storyboard */,
+				6019899E1D5C38DA00E7CCF9 /* Views */,
+				6019899D1D5C36B500E7CCF9 /* Controllers */,
+				6019899F1D5C38EE00E7CCF9 /* Models */,
+				601989A31D5C3ABF00E7CCF9 /* Repositories */,
 				6019896E1D5C361500E7CCF9 /* Assets.xcassets */,
-				601989701D5C361500E7CCF9 /* LaunchScreen.storyboard */,
 				601989731D5C361500E7CCF9 /* Info.plist */,
 				601989621D5C361500E7CCF9 /* Supporting Files */,
 			);
@@ -117,6 +134,9 @@
 		601989621D5C361500E7CCF9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				601989701D5C361500E7CCF9 /* LaunchScreen.storyboard */,
+				601989651D5C361500E7CCF9 /* AppDelegate.h */,
+				601989661D5C361500E7CCF9 /* AppDelegate.m */,
 				601989631D5C361500E7CCF9 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +158,74 @@
 				601989891D5C361500E7CCF9 /* Info.plist */,
 			);
 			path = twoViewsUITests;
+			sourceTree = "<group>";
+		};
+		6019899D1D5C36B500E7CCF9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				601989681D5C361500E7CCF9 /* ViewController.h */,
+				601989691D5C361500E7CCF9 /* ViewController.m */,
+				601989981D5C36AE00E7CCF9 /* ItemsViewController.h */,
+				601989991D5C36AE00E7CCF9 /* ItemsViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6019899E1D5C38DA00E7CCF9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6019896B1D5C361500E7CCF9 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6019899F1D5C38EE00E7CCF9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				601989A01D5C3A6600E7CCF9 /* AppModel.h */,
+				601989A11D5C3A6600E7CCF9 /* AppModel.m */,
+				601989AA1D5C3C2C00E7CCF9 /* Settings.h */,
+				601989AB1D5C3C2C00E7CCF9 /* Settings.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		601989A31D5C3ABF00E7CCF9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				601989A81D5C3B5D00E7CCF9 /* Test */,
+				601989A91D5C3B6400E7CCF9 /* Production */,
+				601989A71D5C3B5200E7CCF9 /* Protocols */,
+				601989A41D5C3AEB00E7CCF9 /* RepositoryLocator.h */,
+				601989A51D5C3AEB00E7CCF9 /* RepositoryLocator.m */,
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
+		601989A71D5C3B5200E7CCF9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				601989B01D5C3CA700E7CCF9 /* ISettingsRepository.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		601989A81D5C3B5D00E7CCF9 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				601989B11D5C3E0600E7CCF9 /* TestSettingsRepository.h */,
+				601989B21D5C3E0600E7CCF9 /* TestSettingsRepository.m */,
+			);
+			name = Test;
+			sourceTree = "<group>";
+		};
+		601989A91D5C3B6400E7CCF9 /* Production */ = {
+			isa = PBXGroup;
+			children = (
+				601989B41D5C3FA100E7CCF9 /* SettingsRepository.h */,
+				601989B51D5C3FA100E7CCF9 /* SettingsRepository.m */,
+			);
+			name = Production;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +359,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6019896A1D5C361500E7CCF9 /* ViewController.m in Sources */,
+				6019899B1D5C36AE00E7CCF9 /* ItemsViewController.m in Sources */,
+				601989A21D5C3A6600E7CCF9 /* AppModel.m in Sources */,
 				601989671D5C361500E7CCF9 /* AppDelegate.m in Sources */,
+				601989B31D5C3E0600E7CCF9 /* TestSettingsRepository.m in Sources */,
+				601989A61D5C3AEB00E7CCF9 /* RepositoryLocator.m in Sources */,
 				601989641D5C361500E7CCF9 /* main.m in Sources */,
+				601989B61D5C3FA100E7CCF9 /* SettingsRepository.m in Sources */,
+				601989AC1D5C3C2C00E7CCF9 /* Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
