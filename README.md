@@ -6,4 +6,4 @@ Used libraries:
 * AFNetworking
 * Mantle
 
-pd: just open appStore.xcworkspace
+pd: just open twoViews.xcworkspace
