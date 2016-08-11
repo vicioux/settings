@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9u1-is-zhG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,20 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnr-GD-72q">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnr-GD-72q">
+                                <rect key="frame" x="250" y="285" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Tqe-Gf-e4e"/>
+                                </constraints>
+                                <state key="normal" title="Go to List"/>
                                 <connections>
                                     <segue destination="bqk-NK-rE2" kind="show" id="UD8-pJ-EAU"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lnr-GD-72q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0v9-II-m8g"/>
+                            <constraint firstItem="Lnr-GD-72q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="diK-bL-WEG"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="TE4-Lb-Uqr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89" y="417"/>
+            <point key="canvasLocation" x="901" y="417"/>
         </scene>
         <!--Items View Controller-->
         <scene sceneID="ogI-2A-Ot6">
@@ -58,8 +67,20 @@
                             <constraint firstItem="ySv-Y9-5dg" firstAttribute="centerY" secondItem="eBD-6i-nUj" secondAttribute="centerY" id="Jjs-pO-AJV"/>
                             <constraint firstItem="ySv-Y9-5dg" firstAttribute="width" secondItem="eBD-6i-nUj" secondAttribute="width" id="Vv0-FO-qGn"/>
                             <constraint firstItem="ySv-Y9-5dg" firstAttribute="centerX" secondItem="eBD-6i-nUj" secondAttribute="centerX" id="dID-Yy-5Ld"/>
-                            <constraint firstItem="ySv-Y9-5dg" firstAttribute="height" secondItem="eBD-6i-nUj" secondAttribute="height" id="i4B-i8-du6"/>
+                            <constraint firstItem="ySv-Y9-5dg" firstAttribute="top" secondItem="hpb-KU-sqx" secondAttribute="bottom" constant="40" id="eLs-6u-sfX"/>
+                            <constraint firstItem="ySv-Y9-5dg" firstAttribute="centerY" secondItem="eBD-6i-nUj" secondAttribute="centerY" id="gja-uK-ZQf"/>
+                            <constraint firstItem="ySv-Y9-5dg" firstAttribute="height" secondItem="eBD-6i-nUj" secondAttribute="height" multiplier="0.9" id="i4B-i8-du6"/>
+                            <constraint firstItem="ySv-Y9-5dg" firstAttribute="height" secondItem="eBD-6i-nUj" secondAttribute="height" id="khP-Qo-fMP"/>
+                            <constraint firstItem="HIb-Su-RXS" firstAttribute="top" secondItem="ySv-Y9-5dg" secondAttribute="bottom" id="ztK-0R-2bq"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Jjs-pO-AJV"/>
+                                <exclude reference="eLs-6u-sfX"/>
+                                <exclude reference="i4B-i8-du6"/>
+                                <exclude reference="ztK-0R-2bq"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="itemsTableView" destination="ySv-Y9-5dg" id="Ba6-fL-NLq"/>
@@ -67,7 +88,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1p-PY-pXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="444"/>
+            <point key="canvasLocation" x="1637" y="444"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sKf-Yo-8QN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9u1-is-zhG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pbQ-gY-rc0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="H8S-Mu-tiP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7zg-pv-Jkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="417"/>
         </scene>
     </scenes>
 </document>
