@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Mantle.h"
 
-@interface Settings : MTLModel
+@interface Settings : MTLModel <MTLJSONSerializing>
 
 @property(nonatomic, copy) NSString *code;
 @property(nonatomic, copy) NSString *codeTwo;
